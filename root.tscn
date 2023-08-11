@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dao0nq3oawri0"]
+
+[node name="Root" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45
+anchor_right = 0.5
+anchor_bottom = 0.45
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 120.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 35
+text = "Hello World"
+horizontal_alignment = 1
