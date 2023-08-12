@@ -2,15 +2,14 @@ extends Node2D
 
 class_name Board
 
+const MAX_ROUNDS = 10
 var rnd = 1
-var round_map = {}
+
 
 func update(input):
-	round_map.get(rnd, round_map[2]).render_submission(input)
-	rnd += 1
+	$OutputHousing.get_children()[rnd - 1] \
+		.render_submission(input)
+	rnd = rnd + 1 if rnd <= MAX_ROUNDS else MAX_ROUNDS
 
 func _ready():
-	round_map = {
-		1: $OutputHousing/output1,
-		2: $OutputHousing/output2
-	}	
+	pass

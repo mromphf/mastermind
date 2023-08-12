@@ -15,6 +15,8 @@ func _draw_cheat_box(imgs):
 
 
 func on_selection(sel: Selector):
+	$Submit.disabled = not $Selections.get_children() \
+		.all(func(s: Selector): return s.ord > 0)
 	sel._update_text(img_map[sel.ord])
 	
 	
