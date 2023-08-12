@@ -1,14 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dao0nq3oawri0"]
+[gd_scene load_steps=4 format=3 uid="uid://dao0nq3oawri0"]
 
 [ext_resource type="PackedScene" uid="uid://b3nsy3b6v54px" path="res://HUD.tscn" id="1_6aub6"]
 [ext_resource type="PackedScene" uid="uid://j5a1mjrxu15r" path="res://Board.tscn" id="1_6ygrk"]
+[ext_resource type="Script" path="res://root.gd" id="1_nedjg"]
 
 [node name="Root" type="Node"]
+script = ExtResource("1_nedjg")
 
 [node name="Board" parent="." instance=ExtResource("1_6ygrk")]
 
 [node name="HUD" parent="." instance=ExtResource("1_6aub6")]
-offset_left = 600.0
-offset_top = 400.0
-offset_right = 600.0
-offset_bottom = 400.0
