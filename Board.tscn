@@ -13,7 +13,7 @@ modulate = Color(0.168627, 0.278431, 0.364706, 1)
 offset_left = -80.0
 offset_top = -80.0
 offset_right = 1280.0
-offset_bottom = 880.0
+offset_bottom = 1000.0
 texture = SubResource("CanvasTexture_rbagi")
 
 [node name="OutputHousing" type="Control" parent="."]
@@ -24,7 +24,31 @@ offset_right = 800.0
 offset_bottom = 800.0
 
 [node name="output1" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 40)
+position = Vector2(40, 18)
 
 [node name="output2" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 120)
+position = Vector2(40, 98)
+
+[node name="output3" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 178)
+
+[node name="output4" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 255)
+
+[node name="output5" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 331)
+
+[node name="output6" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 411)
+
+[node name="output7" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 491)
+
+[node name="output8" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 571)
+
+[node name="output9" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 651)
+
+[node name="output10" parent="OutputHousing" instance=ExtResource("1_2df6f")]
+position = Vector2(40, 731)

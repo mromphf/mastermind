@@ -11,9 +11,9 @@ script = ExtResource("1_0eupj")
 [node name="Submit" type="Button" parent="."]
 layout_mode = 2
 offset_left = 520.0
-offset_top = 720.0
+offset_top = 922.0
 offset_right = 640.0
-offset_bottom = 763.0
+offset_bottom = 965.0
 theme_override_font_sizes/font_size = 25
 text = "Submit"
 
@@ -62,29 +62,29 @@ offset_bottom = 40.0
 [node name="Selector1" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
 offset_left = 440.0
-offset_top = 640.0
+offset_top = 842.0
 offset_right = 517.0
-offset_bottom = 720.0
+offset_bottom = 922.0
 
 [node name="Selector2" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
 offset_left = 520.0
-offset_top = 640.0
+offset_top = 842.0
 offset_right = 597.0
-offset_bottom = 720.0
+offset_bottom = 922.0
 
 [node name="Selector3" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
 offset_left = 600.0
-offset_top = 640.0
+offset_top = 842.0
 offset_right = 680.0
-offset_bottom = 720.0
+offset_bottom = 922.0
 
 [node name="Selector4" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
 offset_left = 680.0
-offset_top = 640.0
+offset_top = 842.0
 offset_right = 757.0
-offset_bottom = 719.0
+offset_bottom = 921.0
 
 [connection signal="pressed" from="Submit" to="." method="_on_submit"]
