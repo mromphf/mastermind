@@ -10,17 +10,26 @@ var __debug = {
 	c.YELLOW: "Yellow"
 }
 
+
+func _unique(arr):
+	var res = []
+	for x in arr:
+		if x not in res:
+			res.push_back(x)
+	return res
+
+
 func on_submission(submission: Dictionary):
-	var pos_cor = code.keys() \
-		.filter(func(x: int): return code[x] == submission[x])
+	var hits = code.keys() \
+		.filter(func(x: int): return code[x] == submission[x]) \
+		.map(func(x: int): return code[x])
 
-	var red = pos_cor.size()
-
-	var white = submission.values() \
-		.filter(func(x: int): return x in code.values() and x not in pos_cor) \
+	var white = _unique(submission.values()) \
+		.filter(func(x: int): return x in code.values()) \
+		.filter(func(x: int): return x not in hits) \
 		.size()
 
-	$Board.update(submission.values(), red, white)
+	$Board.update(submission.values(), hits.size(), white)
 
 
 func _ready():
@@ -33,4 +42,4 @@ func _ready():
 		4: targets.pick_random()
 	}
 	print(code.values().map(func(x: int): return __debug[x]))
-	# $HUD._draw_cheat_box(code.values());
+#	$HUD._draw_cheat_box(code.values());

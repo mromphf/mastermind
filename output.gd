@@ -12,7 +12,7 @@ func render_hints(correct: int, white: int):
 	for hint in hints.slice(0, correct):
 		hint.set_texture(Code.hint_map[2])
 
-	for hint in hints.slice(correct, white):
+	for hint in hints.slice(correct, correct + white):
 		hint.set_texture(Code.hint_map[1])
 
 
