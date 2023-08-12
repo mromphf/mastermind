@@ -61,17 +61,41 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureButton" type="TextureButton" parent="Control"]
+[node name="Selection1" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 440.0
 offset_top = 600.0
-offset_right = 520.0
-offset_bottom = 680.0
-
-[node name="BlcWhite" type="Sprite2D" parent="Control/TextureButton"]
-position = Vector2(40, 38)
+offset_right = 594.0
+offset_bottom = 754.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_tr441")
+texture_normal = ExtResource("2_tr441")
+
+[node name="Selection2" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 600.0
+offset_right = 674.0
+offset_bottom = 754.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_tr441")
+
+[node name="Selection3" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 600.0
+offset_right = 754.0
+offset_bottom = 754.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_tr441")
+
+[node name="Selection4" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 600.0
+offset_right = 834.0
+offset_bottom = 754.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_tr441")
 
 [node name="Submit" type="Button" parent="Control"]
 layout_mode = 1
@@ -83,4 +107,7 @@ offset_bottom = 763.0
 theme_override_font_sizes/font_size = 25
 text = "Submit"
 
-[connection signal="pressed" from="Control/TextureButton" to="." method="_pressed"]
+[connection signal="pressed" from="Control/Selection1" to="." method="_pressed"]
+[connection signal="pressed" from="Control/Selection2" to="." method="_pressed"]
+[connection signal="pressed" from="Control/Selection3" to="." method="_pressed"]
+[connection signal="pressed" from="Control/Selection4" to="." method="_pressed"]
