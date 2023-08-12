@@ -10,3 +10,5 @@ script = ExtResource("1_nedjg")
 [node name="Board" parent="." instance=ExtResource("1_6ygrk")]
 
 [node name="HUD" parent="." instance=ExtResource("1_6aub6")]
+
+[connection signal="publish_submission" from="HUD" to="." method="on_submission"]

@@ -1,14 +1,11 @@
 extends Control
 
+signal publish_submission
+
 var c = Code.Colors
 
-var img_map = {
-	c.AQUA: preload("res://img/blc_aqua.svg"),
-	c.YELLOW: preload("res://img/blc_yellow.svg"),
-	c.GREEN: preload("res://img/blc_green.svg"),
-	c.PINK: preload("res://img/blc_pink.svg"),
-	c.PURPLE: preload("res://img/blc_purple.svg")
-}
+var img_map = Code.image_map
+
 
 func _draw_cheat_box(imgs):
 	$CheatBox/Cheat1.set_texture(img_map[imgs[0]])
@@ -24,7 +21,7 @@ func on_selection(sel: Selector):
 func _on_submit():
 	var arr = $Selections.get_children() \
 		.map(func(s:Selector): return s.ord)
-	print(arr == [1, 2, 2, 4])
+	emit_signal("publish_submission", arr)
 	
 	
 func _ready():

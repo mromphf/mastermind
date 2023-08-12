@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0216y6og1y2l"]
+[gd_scene load_steps=4 format=3 uid="uid://d0216y6og1y2l"]
 
 [ext_resource type="Texture2D" uid="uid://cpvu1rsfkjm85" path="res://img/blc_empty.svg" id="1_u66y8"]
+[ext_resource type="Script" path="res://output.gd" id="1_usft5"]
 [ext_resource type="Texture2D" uid="uid://gsjg81gaoqby" path="res://img/crc_empty.svg" id="2_ij8el"]
 
 [node name="output" type="Node2D"]
+script = ExtResource("1_usft5")
 
 [node name="Input" type="Control" parent="."]
 layout_mode = 3
