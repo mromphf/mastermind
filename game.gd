@@ -11,13 +11,24 @@ enum Colors {
 	YELLOW = 5
 }
 
+enum Hints {
+	EMPTY = 0,
+	WHITE = 1,
+	RED = 2
+}
 
 
 static var image_map = {
-	Code.Colors.WHITE: preload("res://img/blc_white.svg"),
-	Code.Colors.AQUA: preload("res://img/blc_aqua.svg"),
-	Code.Colors.YELLOW: preload("res://img/blc_yellow.svg"),
-	Code.Colors.GREEN: preload("res://img/blc_green.svg"),
-	Code.Colors.PINK: preload("res://img/blc_pink.svg"),
-	Code.Colors.PURPLE: preload("res://img/blc_purple.svg")
+	Colors.WHITE: preload("res://img/blc_white.svg"),
+	Colors.AQUA: preload("res://img/blc_aqua.svg"),
+	Colors.YELLOW: preload("res://img/blc_yellow.svg"),
+	Colors.GREEN: preload("res://img/blc_green.svg"),
+	Colors.PINK: preload("res://img/blc_pink.svg"),
+	Colors.PURPLE: preload("res://img/blc_purple.svg")
+}
+
+static var hint_map = {
+	Hints.EMPTY: preload("res://img/crc_empty.svg"),
+	Hints.WHITE: preload("res://img/crc_white.svg"),
+	Hints.RED: preload("res://img/crc_red.svg")
 }

@@ -22,9 +22,12 @@ func on_selection(sel: Selector):
 	
 func _on_submit():
 	$Snap.play()
-	var arr = $Selections.get_children() \
-		.map(func(s:Selector): return s.ord)
-	emit_signal("publish_submission", arr)
+	emit_signal("publish_submission", {
+		1: $Selections/Selector1.ord,
+		2: $Selections/Selector2.ord,
+		3: $Selections/Selector3.ord,
+		4: $Selections/Selector4.ord
+	})
 	
 	
 func _ready():

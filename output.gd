@@ -6,6 +6,12 @@ func render_submission(submission):
 	for idx in inputs.keys():
 		inputs[idx].set_texture(Code.image_map[submission[idx]])
 
+
+func render_hints(correct: int):
+	for hint in $Hints.get_children().slice(0, correct):
+		hint.set_texture(Code.hint_map[2])
+
+
 func _ready():
 	inputs = {
 		0: $Input/Box1,
