@@ -11,5 +11,6 @@ func _update_text(text):
 
 
 func _pressed():
+	$Snap.play()
 	ord = ord + 1 if ord < 5 else 1
 	emit_signal("selector_pushed", self)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpq47b3uc84so"]
+[gd_scene load_steps=4 format=3 uid="uid://bpq47b3uc84so"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_0eupj"]
 [ext_resource type="PackedScene" uid="uid://3gqix6jtt026" path="res://Selector.tscn" id="2_f1ncc"]
+[ext_resource type="AudioStream" uid="uid://bi4oki6c5jmyn" path="res://sfx/snap.mp3" id="3_ph00s"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -87,5 +88,9 @@ offset_left = 680.0
 offset_top = 842.0
 offset_right = 757.0
 offset_bottom = 921.0
+
+[node name="Snap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ph00s")
+volume_db = -15.0
 
 [connection signal="pressed" from="Submit" to="." method="_on_submit"]

@@ -21,6 +21,7 @@ func on_selection(sel: Selector):
 	
 	
 func _on_submit():
+	$Snap.play()
 	var arr = $Selections.get_children() \
 		.map(func(s:Selector): return s.ord)
 	emit_signal("publish_submission", arr)

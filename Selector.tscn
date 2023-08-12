@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://3gqix6jtt026"]
+[gd_scene load_steps=4 format=3 uid="uid://3gqix6jtt026"]
 
 [ext_resource type="Script" path="res://selector.gd" id="1_5xeft"]
 [ext_resource type="Texture2D" uid="uid://7boequc0lv8y" path="res://img/blc_white.svg" id="2_7oxvu"]
+[ext_resource type="AudioStream" uid="uid://bi4oki6c5jmyn" path="res://sfx/snap.mp3" id="3_dtvqj"]
 
 [node name="Selector" type="TextureButton"]
 offset_left = -38.0
@@ -14,3 +15,7 @@ script = ExtResource("1_5xeft")
 position = Vector2(38, 40)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7oxvu")
+
+[node name="Snap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dtvqj")
+volume_db = -15.0
