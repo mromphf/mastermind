@@ -5,8 +5,12 @@ func on_submission(submission: Dictionary):
 	var red = code.keys() \
 		.filter(func(x: int): return code[x] == submission[x]) \
 		.size()
-	
-	$Board.update(submission.values(), red)
+
+	var white = submission.values() \
+		.filter(func(x: int): return x in code.values()) \
+		.size()
+
+	$Board.update(submission.values(), red, white)
 
 
 func _ready():

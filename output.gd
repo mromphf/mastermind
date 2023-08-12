@@ -7,9 +7,13 @@ func render_submission(submission):
 		inputs[idx].set_texture(Code.image_map[submission[idx]])
 
 
-func render_hints(correct: int):
-	for hint in $Hints.get_children().slice(0, correct):
+func render_hints(correct: int, white: int):
+	var hints = $Hints.get_children()
+	for hint in hints.slice(0, correct):
 		hint.set_texture(Code.hint_map[2])
+
+	for hint in hints.slice(correct, white):
+		hint.set_texture(Code.hint_map[1])
 
 
 func _ready():
