@@ -1,7 +1,7 @@
 extends Node
 var code = {}
 
-func on_submission(submission: Dictionary):	
+func on_submission(submission: Dictionary):
 	var red = code.keys() \
 		.filter(func(x: int): return code[x] == submission[x]) \
 		.size()

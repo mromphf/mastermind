@@ -6,6 +6,10 @@ signal selector_pushed
 
 @export var ord: int = 0
 
+func reset():
+	ord = 0
+	$Sprite.set_texture(Code.image_map[Code.Colors.WHITE])
+
 func _update_text(text):
 	$Sprite.set_texture(text)
 
