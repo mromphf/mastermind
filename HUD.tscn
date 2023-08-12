@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpq47b3uc84so"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_0eupj"]
-[ext_resource type="Texture2D" uid="uid://dfxxpve7nblp" path="res://img/blc_white.svg" id="2_tr441"]
+[ext_resource type="PackedScene" uid="uid://3gqix6jtt026" path="res://selector.tscn" id="2_f1ncc"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -61,41 +61,29 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Selection1" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 440.0
-offset_top = 600.0
-offset_right = 594.0
-offset_bottom = 754.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_tr441")
+[node name="Selector1" parent="Control" instance=ExtResource("2_f1ncc")]
+offset_left = 480.0
+offset_top = 640.0
+offset_right = 480.0
+offset_bottom = 640.0
 
-[node name="Selection2" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 520.0
-offset_top = 600.0
-offset_right = 674.0
-offset_bottom = 754.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_tr441")
+[node name="Selector3" parent="Control" instance=ExtResource("2_f1ncc")]
+offset_left = 640.0
+offset_top = 640.0
+offset_right = 640.0
+offset_bottom = 640.0
 
-[node name="Selection3" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 600.0
-offset_top = 600.0
-offset_right = 754.0
-offset_bottom = 754.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_tr441")
+[node name="Selector2" parent="Control" instance=ExtResource("2_f1ncc")]
+offset_left = 560.0
+offset_top = 640.0
+offset_right = 560.0
+offset_bottom = 640.0
 
-[node name="Selection4" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 680.0
-offset_top = 600.0
-offset_right = 834.0
-offset_bottom = 754.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_tr441")
+[node name="Selector4" parent="Control" instance=ExtResource("2_f1ncc")]
+offset_left = 720.0
+offset_top = 640.0
+offset_right = 720.0
+offset_bottom = 640.0
 
 [node name="Submit" type="Button" parent="Control"]
 layout_mode = 1
@@ -106,8 +94,3 @@ offset_right = 640.0
 offset_bottom = 763.0
 theme_override_font_sizes/font_size = 25
 text = "Submit"
-
-[connection signal="pressed" from="Control/Selection1" to="." method="_pressed"]
-[connection signal="pressed" from="Control/Selection2" to="." method="_pressed"]
-[connection signal="pressed" from="Control/Selection3" to="." method="_pressed"]
-[connection signal="pressed" from="Control/Selection4" to="." method="_pressed"]
