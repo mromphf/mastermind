@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0216y6og1y2l"]
+
+[ext_resource type="Texture2D" uid="uid://cpvu1rsfkjm85" path="res://img/blc_empty.svg" id="1_u66y8"]
+[ext_resource type="Texture2D" uid="uid://gsjg81gaoqby" path="res://img/crc_empty.svg" id="2_ij8el"]
+
+[node name="output" type="Node2D"]
+
+[node name="Input" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 400.0
+offset_bottom = 160.0
+
+[node name="Box1" type="Sprite2D" parent="Input"]
+position = Vector2(80.75, 80.75)
+scale = Vector2(0.50974, 0.50974)
+texture = ExtResource("1_u66y8")
+
+[node name="Box2" type="Sprite2D" parent="Input"]
+position = Vector2(160, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_u66y8")
+
+[node name="Box3" type="Sprite2D" parent="Input"]
+position = Vector2(240, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_u66y8")
+
+[node name="Box4" type="Sprite2D" parent="Input"]
+position = Vector2(320, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_u66y8")
+
+[node name="Hints" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 400.0
+offset_top = 42.0
+offset_right = 600.0
+offset_bottom = 120.0
+
+[node name="Hint1" type="Sprite2D" parent="Hints"]
+position = Vector2(40, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ij8el")
+
+[node name="Hint2" type="Sprite2D" parent="Hints"]
+position = Vector2(80, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ij8el")
+
+[node name="Hint3" type="Sprite2D" parent="Hints"]
+position = Vector2(120, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ij8el")
+
+[node name="Hint4" type="Sprite2D" parent="Hints"]
+position = Vector2(160, 38)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ij8el")
