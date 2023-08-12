@@ -9,4 +9,4 @@ func _draw_cheat_box(imgs):
 
 
 func _pressed():
-	print("Hello world!")
+	pass
