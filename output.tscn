@@ -8,36 +8,35 @@
 [node name="Input" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 160.0
+offset_right = 320.0
+offset_bottom = 80.0
 
 [node name="Box1" type="Sprite2D" parent="Input"]
-position = Vector2(80.75, 80.75)
+position = Vector2(39.25, 39.25)
 scale = Vector2(0.50974, 0.50974)
 texture = ExtResource("1_u66y8")
 
 [node name="Box2" type="Sprite2D" parent="Input"]
-position = Vector2(160, 80)
+position = Vector2(118.5, 38.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_u66y8")
 
 [node name="Box3" type="Sprite2D" parent="Input"]
-position = Vector2(240, 80)
+position = Vector2(198.5, 38.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_u66y8")
 
 [node name="Box4" type="Sprite2D" parent="Input"]
-position = Vector2(320, 80)
+position = Vector2(278.5, 38.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_u66y8")
 
 [node name="Hints" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 400.0
-offset_top = 42.0
-offset_right = 600.0
-offset_bottom = 120.0
+offset_left = 320.0
+offset_right = 520.0
+offset_bottom = 78.0
 
 [node name="Hint1" type="Sprite2D" parent="Hints"]
 position = Vector2(40, 38)
