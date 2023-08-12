@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3gqix6jtt026"]
 
 [ext_resource type="Script" path="res://selector.gd" id="1_5xeft"]
-[ext_resource type="Texture2D" uid="uid://dfxxpve7nblp" path="res://img/blc_white.svg" id="2_7oxvu"]
+[ext_resource type="Texture2D" uid="uid://7boequc0lv8y" path="res://img/blc_white.svg" id="2_7oxvu"]
 
 [node name="Selector" type="Control"]
 layout_mode = 3
@@ -15,6 +15,11 @@ offset_top = -40.0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_7oxvu")
+
+[node name="TextureRect" type="TextureRect" parent="TextureButton"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 154.0
+texture = ExtResource("2_7oxvu")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_pressed"]

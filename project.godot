@@ -15,12 +15,12 @@ run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Autodownlaod="*res://autodownload.gd"
-
 [display]
 
 window/size/viewport_width=1200
 window/size/viewport_height=800
 window/size/resizable=false
+
+[filesystem]
+
+import/blender/enabled=false
