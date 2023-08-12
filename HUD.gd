@@ -1,6 +1,6 @@
 extends Control
 
-var c = Game.Colors
+var c = Code.Colors
 
 var img_map = {
 	c.AQUA: preload("res://img/blc_aqua.svg"),

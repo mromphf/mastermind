@@ -1,6 +1,6 @@
 extends Object
 
-class_name Game
+class_name Code
 
 enum Colors {
 	AQUA = 1,

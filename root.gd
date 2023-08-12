@@ -1,6 +1,6 @@
 extends Node
 
-var c = Game.Colors
+var c = Code.Colors
 
 
 func _ready():
