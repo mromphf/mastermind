@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://selector.gd" id="1_5xeft"]
 [ext_resource type="Texture2D" uid="uid://7boequc0lv8y" path="res://img/blc_white.svg" id="2_7oxvu"]
 
-[node name="Selector" type="Button"]
+[node name="Selector" type="TextureButton"]
+offset_left = -38.0
+offset_top = -40.0
+offset_right = 42.0
+offset_bottom = 40.0
 script = ExtResource("1_5xeft")
 
-[node name="Texture" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -40.0
-offset_top = -40.0
-offset_right = 120.0
-offset_bottom = 114.0
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(38, 40)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7oxvu")

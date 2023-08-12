@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh5uyvh6o5jr6"
-path="res://.godot/imported/blc_gray.svg-b36c4ad53405f3c809474247996ded10.ctex"
+uid="uid://cpvu1rsfkjm85"
+path="res://.godot/imported/blc_empty.svg-7a509aa73588f6f50b4030fc77be3db2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/blc_gray.svg"
-dest_files=["res://.godot/imported/blc_gray.svg-b36c4ad53405f3c809474247996ded10.ctex"]
+source_file="res://img/blc_empty.svg"
+dest_files=["res://.godot/imported/blc_empty.svg-7a509aa73588f6f50b4030fc77be3db2.ctex"]
 
 [params]
 
