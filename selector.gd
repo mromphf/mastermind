@@ -14,7 +14,11 @@ func _update_text(text):
 	$Sprite.set_texture(text)
 
 
-func _pressed():
-	$Snap.play()
-	ord = ord + 1 if ord < 5 else 1
-	emit_signal("selector_pushed", self)
+func _on_click(event:InputEvent):
+	if event.is_pressed():
+		if event.button_mask == MOUSE_BUTTON_RIGHT:
+			ord = max(1, ord - 1)
+		elif event.button_mask == MOUSE_BUTTON_LEFT:
+			ord = min(5, ord + 1)
+		$Snap.play()
+		emit_signal("selector_pushed", self)

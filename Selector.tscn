@@ -9,6 +9,7 @@ offset_left = -38.0
 offset_top = -40.0
 offset_right = 42.0
 offset_bottom = 40.0
+button_mask = 3
 script = ExtResource("1_5xeft")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -19,3 +20,5 @@ texture = ExtResource("2_7oxvu")
 [node name="Snap" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dtvqj")
 volume_db = -15.0
+
+[connection signal="gui_input" from="." to="." method="_on_click"]
