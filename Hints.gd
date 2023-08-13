@@ -4,11 +4,11 @@ var _hints = []
 var _nodes = []
 
 func _tick():
-	if not _hints.is_empty():
+	if _hints.is_empty():
+		$Timer.stop()
+	else:
 		$Beep.play()
 		_nodes.pop_front().set_texture(_hints.pop_back())
-	else:
-		$Timer.stop()
 
 
 func reset():
