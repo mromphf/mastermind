@@ -5,6 +5,7 @@ var _idx = 0
 
 func _tick():
 	if not _hints.is_empty():
+		$Beep.play()
 		$Control.get_children()[_idx].set_texture(_hints.pop_back())
 		_idx += 1
 	else:

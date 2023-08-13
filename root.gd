@@ -48,6 +48,7 @@ func on_submission(submission: Dictionary):
 	if submission == code:
 		$GameOver.render(code, true)
 	elif rnd == MAX_ROUNDS:
+		$Buzzer.play()
 		$GameOver.render(code)
 	rnd += 1
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgodxs4v4640m"]
+[gd_scene load_steps=4 format=3 uid="uid://bgodxs4v4640m"]
 
 [ext_resource type="Script" path="res://Hints.gd" id="1_lglfy"]
 [ext_resource type="Texture2D" uid="uid://gsjg81gaoqby" path="res://img/crc_empty.svg" id="1_wisrt"]
+[ext_resource type="AudioStream" uid="uid://bd474q0upqc30" path="res://sfx/beep.mp3" id="3_i5by6"]
 
 [node name="Hints" type="Node2D"]
 script = ExtResource("1_lglfy")
@@ -34,5 +35,8 @@ texture = ExtResource("1_wisrt")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.25
+
+[node name="Beep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i5by6")
 
 [connection signal="timeout" from="Timer" to="." method="_tick"]

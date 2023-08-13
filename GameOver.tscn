@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhoronxqmj2jb"]
+[gd_scene load_steps=5 format=3 uid="uid://dhoronxqmj2jb"]
 
 [ext_resource type="Script" path="res://GameOver.gd" id="1_ujdme"]
 [ext_resource type="Texture2D" uid="uid://cpvu1rsfkjm85" path="res://img/blc_empty.svg" id="2_bxg0o"]
+[ext_resource type="AudioStream" uid="uid://bi4oki6c5jmyn" path="res://sfx/snap.mp3" id="3_dgw14"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rc4dd"]
 
@@ -74,5 +75,8 @@ texture = ExtResource("2_bxg0o")
 position = Vector2(280, 40)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_bxg0o")
+
+[node name="Snap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dgw14")
 
 [connection signal="pressed" from="Button" to="." method="_on_play_again"]
