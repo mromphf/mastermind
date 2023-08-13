@@ -5,6 +5,10 @@ class_name Board
 const MAX_ROUNDS = 10
 var rnd = 1
 
+func reset():
+	rnd = 1
+	for node in $OutputHousing.get_children():
+		node.reset()
 
 func update(input, red, white):
 	var target = $OutputHousing.get_children()[rnd - 1]

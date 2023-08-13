@@ -1,4 +1,5 @@
 extends Node
+
 var code = {}
 var c = Code.Colors
 
@@ -18,6 +19,23 @@ func _unique(arr):
 			res.push_back(x)
 	return res
 
+func _gen_code():
+	var targets = [c.AQUA, c.GREEN, c.PINK, c.PURPLE, c.YELLOW]
+	return {
+		1: targets.pick_random(),
+		2: targets.pick_random(),
+		3: targets.pick_random(),
+		4: targets.pick_random()
+	}
+
+
+func on_play_again():
+	$Board.reset()
+	$HUD.reset()
+	$GameOver.visible = false
+	code = _gen_code()
+	print(code.values().map(func(x: int): return __debug[x]))
+
 
 func on_submission(submission: Dictionary):
 	var hits = code.keys() \
@@ -30,16 +48,13 @@ func on_submission(submission: Dictionary):
 		.size()
 
 	$Board.update(submission.values(), hits.size(), white)
+	
+	if submission == code:
+		$GameOver.visible = true
 
 
 func _ready():
-	var targets = [c.AQUA, c.GREEN, c.PINK, c.PURPLE, c.YELLOW]
-
-	code = {
-		1: targets.pick_random(),
-		2: targets.pick_random(),
-		3: targets.pick_random(),
-		4: targets.pick_random()
-	}
+	randomize()
+	code = _gen_code()
 	print(code.values().map(func(x: int): return __debug[x]))
-#	$HUD._draw_cheat_box(code.values());
+#	$HUD._draw_cheat_box(code.values())

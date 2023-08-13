@@ -30,10 +30,11 @@ func _on_submit():
 		4: $Selections/Selector4.ord
 	})
 
+
+func reset():
 	for sel in $Selections.get_children():
 		sel.reset()
-	
-	
+
 func _ready():
 	for selector in $Selections.get_children():
 		selector.connect("selector_pushed", on_selection)

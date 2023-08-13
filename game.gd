@@ -18,6 +18,9 @@ enum Hints {
 }
 
 
+static var EMPTY_BOX = preload("res://img/blc_empty.svg")
+static var EMPTY_CIRCLE = preload("res://img/crc_empty.svg")
+
 static var image_map = {
 	Colors.WHITE: preload("res://img/blc_white.svg"),
 	Colors.AQUA: preload("res://img/blc_aqua.svg"),

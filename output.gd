@@ -16,6 +16,13 @@ func render_hints(correct: int, white: int):
 		hint.set_texture(Code.hint_map[1])
 
 
+func reset():
+	for ipt in inputs.values():
+		ipt.set_texture(Code.EMPTY_BOX)
+
+	for h in $Hints.get_children():
+		h.set_texture(Code.EMPTY_CIRCLE)
+
 func _ready():
 	inputs = {
 		0: $Input/Box1,
