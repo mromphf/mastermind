@@ -7,14 +7,6 @@ const c = Code.Colors
 var code = {}
 var rnd = 1
 
-var __debug = {
-	c.AQUA: "Aqua",
-	c.GREEN: "Green",
-	c.PINK: "Pink",
-	c.PURPLE: "Purple",
-	c.YELLOW: "Yellow"
-}
-
 
 func _unique(arr):
 	var res = []
@@ -39,7 +31,6 @@ func on_play_again():
 	$GameOver.visible = false
 	code = _gen_code()
 	rnd = 1
-#	print(code.values().map(func(x: int): return __debug[x]))
 
 
 func on_submission(submission: Dictionary):
@@ -64,5 +55,3 @@ func on_submission(submission: Dictionary):
 func _ready():
 	randomize()
 	code = _gen_code()
-#	print(code.values().map(func(x: int): return __debug[x]))
-#	$HUD._draw_cheat_box(code.values())
