@@ -39,7 +39,7 @@ func on_play_again():
 	$GameOver.visible = false
 	code = _gen_code()
 	rnd = 1
-	print(code.values().map(func(x: int): return __debug[x]))
+#	print(code.values().map(func(x: int): return __debug[x]))
 
 
 func on_submission(submission: Dictionary):
@@ -55,14 +55,14 @@ func on_submission(submission: Dictionary):
 	$Board.update(rnd, submission.values(), hits.size(), white)
 
 	if submission == code:
-		$GameOver.render(true)
+		$GameOver.render(code, true)
 	elif rnd == MAX_ROUNDS:
-		$GameOver.render()
+		$GameOver.render(code)
 	rnd += 1
 
 
 func _ready():
 	randomize()
 	code = _gen_code()
-	print(code.values().map(func(x: int): return __debug[x]))
+#	print(code.values().map(func(x: int): return __debug[x]))
 #	$HUD._draw_cheat_box(code.values())
