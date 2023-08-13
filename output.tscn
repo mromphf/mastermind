@@ -10,52 +10,53 @@ script = ExtResource("1_usft5")
 [node name="Input" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 320.0
+offset_right = 260.0
 offset_bottom = 80.0
 
 [node name="Box1" type="Sprite2D" parent="Input"]
-position = Vector2(39.25, 39.25)
-scale = Vector2(0.50974, 0.50974)
+position = Vector2(40, 40)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_u66y8")
 
 [node name="Box2" type="Sprite2D" parent="Input"]
-position = Vector2(118.5, 38.5)
-scale = Vector2(0.5, 0.5)
+position = Vector2(100, 40)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_u66y8")
 
 [node name="Box3" type="Sprite2D" parent="Input"]
-position = Vector2(198.5, 38.5)
-scale = Vector2(0.5, 0.5)
+position = Vector2(160, 40)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_u66y8")
 
 [node name="Box4" type="Sprite2D" parent="Input"]
-position = Vector2(278.5, 38.5)
-scale = Vector2(0.5, 0.5)
+position = Vector2(220, 40)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_u66y8")
 
 [node name="Hints" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 320.0
-offset_right = 520.0
-offset_bottom = 78.0
+offset_left = 260.0
+offset_top = 20.0
+offset_right = 420.0
+offset_bottom = 61.0
 
 [node name="Hint1" type="Sprite2D" parent="Hints"]
-position = Vector2(40, 38)
+position = Vector2(20.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
 [node name="Hint2" type="Sprite2D" parent="Hints"]
-position = Vector2(80, 38)
+position = Vector2(60.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
 [node name="Hint3" type="Sprite2D" parent="Hints"]
-position = Vector2(120, 38)
+position = Vector2(100.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
 [node name="Hint4" type="Sprite2D" parent="Hints"]
-position = Vector2(160, 38)
+position = Vector2(140.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")

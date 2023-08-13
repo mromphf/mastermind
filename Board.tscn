@@ -20,35 +20,36 @@ texture = SubResource("CanvasTexture_rbagi")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 400.0
-offset_right = 800.0
-offset_bottom = 800.0
+offset_top = 40.0
+offset_right = 880.0
+offset_bottom = 720.0
 
 [node name="output1" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 18)
+position = Vector2(40, 21)
 
 [node name="output2" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 98)
+position = Vector2(40, 82)
 
 [node name="output3" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 178)
+position = Vector2(40, 141)
 
 [node name="output4" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 255)
+position = Vector2(40, 208)
 
 [node name="output5" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 331)
+position = Vector2(40, 274)
 
 [node name="output6" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 411)
+position = Vector2(40, 341)
 
 [node name="output7" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 491)
+position = Vector2(40, 403)
 
 [node name="output8" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 571)
+position = Vector2(40, 461)
 
 [node name="output9" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 651)
+position = Vector2(40, 519)
 
 [node name="output10" parent="OutputHousing" instance=ExtResource("1_2df6f")]
-position = Vector2(40, 731)
+position = Vector2(40, 579)
