@@ -1,7 +1,11 @@
 extends Node
 
+
+const MAX_ROUNDS = 10
+const c = Code.Colors
+
 var code = {}
-var c = Code.Colors
+var rnd = 1
 
 var __debug = {
 	c.AQUA: "Aqua",
@@ -34,6 +38,7 @@ func on_play_again():
 	$HUD.reset()
 	$GameOver.visible = false
 	code = _gen_code()
+	rnd = 1
 	print(code.values().map(func(x: int): return __debug[x]))
 
 
@@ -47,7 +52,8 @@ func on_submission(submission: Dictionary):
 		.filter(func(x: int): return x not in hits) \
 		.size()
 
-	$Board.update(submission.values(), hits.size(), white)
+	$Board.update(rnd, submission.values(), hits.size(), white)
+	rnd = rnd + 1 if rnd <= MAX_ROUNDS else MAX_ROUNDS
 	
 	if submission == code:
 		$GameOver.visible = true
