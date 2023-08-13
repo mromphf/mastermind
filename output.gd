@@ -10,8 +10,8 @@ func render_submission(submission):
 
 
 func render_hints(correct: int, white: int):
-	var reds = range(correct).map(func(_x): return Code.hint_map[Code.Hints.RED])
-	var whites = range(white).map(func(_x): return Code.hint_map[Code.Hints.WHITE])
+	var reds = range(correct).map(func(_x): return Code.Hints.RED)
+	var whites = range(white).map(func(_x): return Code.Hints.WHITE)
 
 	$Hints.render(whites + reds)
 

@@ -46,6 +46,7 @@ func on_submission(submission: Dictionary):
 	$Board.update(rnd, submission.values(), hits.size(), white)
 
 	if submission == code:
+		$Unlocked.play()
 		$GameOver.render(code, true)
 	elif rnd == MAX_ROUNDS:
 		$Buzzer.play()

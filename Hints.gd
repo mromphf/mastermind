@@ -1,5 +1,7 @@
 extends Node2D
 
+const _RED = Code.Hints.RED
+
 var _hints = []
 var _nodes = []
 
@@ -8,15 +10,21 @@ func _tick():
 		$Timer.stop()
 	else:
 		$Beep.play()
-		_nodes.pop_front().set_texture(_hints.pop_back())
+		_nodes.pop_front().set_texture(Code.hint_map[_hints.pop_back()])
 
 
 func reset():
-	for h in $Control.get_children():
-		h.set_texture(Code.hint_map[Code.Hints.EMPTY])
+	for node in $Control.get_children():
+		node.set_texture(Code.hint_map[Code.Hints.EMPTY])
 
 
 func render(hints: Array):
 	_hints = hints
 	_nodes = $Control.get_children()
-	$Timer.start()
+
+	if hints.size() == 4 and hints.all(func(x: int): return x == _RED):
+		$Beep.play()
+		for node in _nodes:
+			node.set_texture(Code.hint_map[_RED])
+	else:
+		$Timer.start()
