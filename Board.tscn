@@ -20,9 +20,8 @@ texture = SubResource("CanvasTexture_rbagi")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 400.0
-offset_top = 40.0
 offset_right = 880.0
-offset_bottom = 720.0
+offset_bottom = 680.0
 
 [node name="output1" parent="OutputHousing" instance=ExtResource("1_2df6f")]
 position = Vector2(40, 21)

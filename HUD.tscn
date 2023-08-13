@@ -12,9 +12,9 @@ script = ExtResource("1_0eupj")
 [node name="Submit" type="Button" parent="."]
 layout_mode = 2
 offset_left = 520.0
-offset_top = 880.0
+offset_top = 800.0
 offset_right = 677.0
-offset_bottom = 960.0
+offset_bottom = 880.0
 theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Submit"
@@ -58,8 +58,9 @@ scale = Vector2(0.25, 0.25)
 
 [node name="Selections" type="Control" parent="."]
 anchors_preset = 0
+offset_top = -80.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = -40.0
 
 [node name="Selector1" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
