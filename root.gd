@@ -3,6 +3,7 @@ extends Node
 
 const MAX_ROUNDS = 10
 const c = Code.Colors
+const _TARGETS = [c.AQUA, c.GREEN, c.PINK, c.PURPLE, c.YELLOW]
 
 var code = {}
 var rnd = 1
@@ -16,12 +17,11 @@ func _unique(arr):
 	return res
 
 func _gen_code():
-	var targets = [c.AQUA, c.GREEN, c.PINK, c.PURPLE, c.YELLOW]
 	return {
-		1: targets.pick_random(),
-		2: targets.pick_random(),
-		3: targets.pick_random(),
-		4: targets.pick_random()
+		1: _TARGETS.pick_random(),
+		2: _TARGETS.pick_random(),
+		3: _TARGETS.pick_random(),
+		4: _TARGETS.pick_random()
 	}
 
 
