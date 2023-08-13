@@ -23,7 +23,8 @@ offset_bottom = 560.0
 theme_override_font_sizes/font_size = 25
 text = "Play Again"
 
-[node name="Label" type="Label" parent="."]
+[node name="Victory" type="Label" parent="."]
+visible = false
 offset_left = 480.0
 offset_top = 280.0
 offset_right = 720.0
@@ -31,6 +32,18 @@ offset_bottom = 440.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Victory!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fail" type="Label" parent="."]
+visible = false
+offset_left = 480.0
+offset_top = 280.0
+offset_right = 720.0
+offset_bottom = 440.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Fail"
 horizontal_alignment = 1
 vertical_alignment = 1
 

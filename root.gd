@@ -53,10 +53,12 @@ func on_submission(submission: Dictionary):
 		.size()
 
 	$Board.update(rnd, submission.values(), hits.size(), white)
-	rnd = rnd + 1 if rnd <= MAX_ROUNDS else MAX_ROUNDS
-	
+
 	if submission == code:
-		$GameOver.visible = true
+		$GameOver.render(true)
+	elif rnd == MAX_ROUNDS:
+		$GameOver.render()
+	rnd += 1
 
 
 func _ready():
