@@ -34,10 +34,11 @@ position = Vector2(220, 40)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_u66y8")
 
-[node name="Hints_new" parent="." instance=ExtResource("3_xpa0y")]
+[node name="Hints" parent="." instance=ExtResource("3_xpa0y")]
 position = Vector2(260, 20)
 
-[node name="Hints" type="Control" parent="."]
+[node name="Hints_old" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 520.0
@@ -45,22 +46,22 @@ offset_top = 20.0
 offset_right = 680.0
 offset_bottom = 61.0
 
-[node name="Hint1" type="Sprite2D" parent="Hints"]
+[node name="Hint1" type="Sprite2D" parent="Hints_old"]
 position = Vector2(20.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
-[node name="Hint2" type="Sprite2D" parent="Hints"]
+[node name="Hint2" type="Sprite2D" parent="Hints_old"]
 position = Vector2(60.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
-[node name="Hint3" type="Sprite2D" parent="Hints"]
+[node name="Hint3" type="Sprite2D" parent="Hints_old"]
 position = Vector2(100.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")
 
-[node name="Hint4" type="Sprite2D" parent="Hints"]
+[node name="Hint4" type="Sprite2D" parent="Hints_old"]
 position = Vector2(140.25, 20.25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ij8el")

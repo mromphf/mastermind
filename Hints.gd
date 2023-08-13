@@ -13,6 +13,7 @@ func _tick():
 
 
 func reset():
+	_idx = 0
 	for h in $Control.get_children():
 		h.set_texture(Code.hint_map[Code.Hints.EMPTY])
 
