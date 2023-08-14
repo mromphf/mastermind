@@ -11,84 +11,48 @@ script = ExtResource("1_0eupj")
 
 [node name="Submit" type="Button" parent="."]
 layout_mode = 2
-offset_left = 520.0
-offset_top = 800.0
-offset_right = 677.0
-offset_bottom = 880.0
+offset_left = 120.0
+offset_top = 160.0
+offset_right = 277.0
+offset_bottom = 240.0
 theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Submit"
 
-[node name="CheatBox" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 120.0
-
-[node name="Cheat1" type="TextureRect" parent="CheatBox"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 40.0
-offset_right = 80.0
-offset_bottom = 80.0
-scale = Vector2(0.25, 0.25)
-
-[node name="Cheat2" type="TextureRect" parent="CheatBox"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 40.0
-offset_right = 120.0
-offset_bottom = 80.0
-scale = Vector2(0.25, 0.25)
-
-[node name="Cheat3" type="TextureRect" parent="CheatBox"]
-layout_mode = 0
-offset_left = 120.0
-offset_top = 40.0
-offset_right = 160.0
-offset_bottom = 80.0
-scale = Vector2(0.25, 0.25)
-
-[node name="Cheat4" type="TextureRect" parent="CheatBox"]
-layout_mode = 0
-offset_left = 160.0
-offset_top = 40.0
-offset_right = 200.0
-offset_bottom = 80.0
-scale = Vector2(0.25, 0.25)
-
 [node name="Selections" type="Control" parent="."]
 anchors_preset = 0
-offset_top = -80.0
-offset_right = 40.0
-offset_bottom = -40.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 360.0
+offset_bottom = 120.0
 
 [node name="Selector1" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
-offset_left = 440.0
-offset_top = 760.0
-offset_right = 517.0
-offset_bottom = 840.0
+offset_left = 0.0
+offset_top = 2.0
+offset_right = 77.0
+offset_bottom = 82.0
 
 [node name="Selector2" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
-offset_left = 520.0
-offset_top = 760.0
-offset_right = 597.0
-offset_bottom = 840.0
+offset_left = 80.0
+offset_top = 2.0
+offset_right = 157.0
+offset_bottom = 82.0
 
 [node name="Selector3" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
-offset_left = 600.0
-offset_top = 760.0
-offset_right = 680.0
-offset_bottom = 840.0
+offset_left = 160.0
+offset_top = 2.0
+offset_right = 240.0
+offset_bottom = 82.0
 
 [node name="Selector4" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
-offset_left = 680.0
-offset_top = 760.0
-offset_right = 757.0
-offset_bottom = 839.0
+offset_left = 240.0
+offset_top = 2.0
+offset_right = 317.0
+offset_bottom = 81.0
 
 [node name="Snap" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ph00s")

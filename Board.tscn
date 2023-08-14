@@ -12,15 +12,15 @@ script = ExtResource("1_y4yw0")
 modulate = Color(0.168627, 0.278431, 0.364706, 1)
 offset_left = -80.0
 offset_top = -80.0
-offset_right = 1280.0
+offset_right = 1080.0
 offset_bottom = 1000.0
 texture = SubResource("CanvasTexture_rbagi")
 
 [node name="OutputHousing" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 400.0
-offset_right = 880.0
+offset_left = 240.0
+offset_right = 720.0
 offset_bottom = 680.0
 
 [node name="output1" parent="OutputHousing" instance=ExtResource("1_2df6f")]

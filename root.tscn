@@ -13,6 +13,10 @@ script = ExtResource("1_nedjg")
 [node name="Board" parent="." instance=ExtResource("1_6ygrk")]
 
 [node name="HUD" parent="." instance=ExtResource("1_6aub6")]
+offset_left = 300.0
+offset_top = 639.0
+offset_right = 300.0
+offset_bottom = 639.0
 
 [node name="GameOver" parent="." instance=ExtResource("4_xing0")]
 visible = false
