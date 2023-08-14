@@ -6,10 +6,9 @@ var c = Code.Colors
 var img_map = Code.image_map
 
 
-func on_selection(sel: Selector):
+func on_selection():
 	$Submit.disabled = not $Selections.get_children() \
 		.all(func(s: Selector): return s.is_selected())
-	sel._update_text(img_map[sel.ord])
 	
 	
 func _on_submit():
@@ -24,8 +23,8 @@ func _on_submit():
 
 
 func reset():
-	for sel in $Selections.get_children():
-		sel.reset()
+	for selector in $Selections.get_children():
+		selector.reset()
 
 func _ready():
 	for selector in $Selections.get_children():

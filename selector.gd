@@ -11,11 +11,7 @@ func is_selected():
 
 func reset():
 	ord = 0
-	$Sprite.set_texture(Code.image_map[Code.Colors.WHITE])
-
-func _update_text(text):
-	$Sprite.set_texture(text)
-
+	$Sprite.set_texture(Code.image_map[ord])
 
 func _on_click(event:InputEvent):
 	if event.is_pressed():
@@ -23,5 +19,7 @@ func _on_click(event:InputEvent):
 			ord = max(1, ord - 1)
 		elif event.button_mask == MOUSE_BUTTON_LEFT:
 			ord = min(5, ord + 1)
+
+		$Sprite.set_texture(Code.image_map[ord])
 		$Snap.play()
-		emit_signal("selector_pushed", self)
+		emit_signal("selector_pushed")

@@ -1,9 +1,13 @@
 extends Node
 
-
-const MAX_ROUNDS = 10
-const c = Code.Colors
-const _TARGETS = [c.AQUA, c.GREEN, c.PINK, c.PURPLE, c.YELLOW]
+const _MAX_ROUNDS = 10
+const _TARGETS = [
+	Code.Colors.AQUA,
+	Code.Colors.GREEN,
+	Code.Colors.PINK,
+	Code.Colors.PURPLE,
+	Code.Colors.YELLOW
+]
 
 var code = {}
 var rnd = 1
@@ -48,7 +52,7 @@ func on_submission(submission: Dictionary):
 	if submission == code:
 		$Unlocked.play()
 		$GameOver.render(code, true)
-	elif rnd == MAX_ROUNDS:
+	elif rnd == _MAX_ROUNDS:
 		$Buzzer.play()
 		$GameOver.render(code)
 	rnd += 1

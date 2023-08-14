@@ -10,7 +10,8 @@ func _tick():
 		$Timer.stop()
 	else:
 		$Beep.play()
-		_nodes.pop_front().set_texture(Code.hint_map[_hints.pop_back()])
+		_nodes.pop_front() \
+			.set_texture(Code.hint_map[_hints.pop_back()])
 
 
 func reset():
