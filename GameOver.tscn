@@ -32,11 +32,13 @@ offset_bottom = 600.0
 
 [node name="TextureRect2" type="TextureRect" parent="Center"]
 modulate = Color(0.458824, 0.458824, 0.458824, 1)
+layout_mode = 0
 offset_right = 440.0
 offset_bottom = 400.0
 texture = SubResource("CanvasTexture_8bner")
 
 [node name="Victory" type="Label" parent="Center"]
+layout_mode = 0
 offset_left = 100.0
 offset_right = 340.0
 offset_bottom = 160.0
@@ -48,6 +50,7 @@ vertical_alignment = 1
 
 [node name="Fail" type="Label" parent="Center"]
 visible = false
+layout_mode = 0
 offset_left = 80.0
 offset_top = 40.0
 offset_right = 320.0
@@ -87,6 +90,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_bxg0o")
 
 [node name="Button" type="Button" parent="Center"]
+layout_mode = 0
 offset_left = 140.0
 offset_top = 280.0
 offset_right = 300.0
