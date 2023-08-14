@@ -6,10 +6,10 @@ func reset():
 	for node in $OutputHousing.get_children():
 		node.reset()
 
-func update(rnd, input, red, white):
+func update(rnd, submission: Submission):
 	var target = $OutputHousing.get_children()[max(0, rnd - 1)]
-	target.render_submission(input)
-	target.render_hints(red, white)
+	target.render_submission(submission.code)
+	target.render_hints(submission.reds, submission.whites)
 
 func _ready():
 	pass

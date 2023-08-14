@@ -9,8 +9,8 @@ func render_submission(submission):
 		inputs[idx].set_texture(Code.image_map[submission[idx]])
 
 
-func render_hints(correct: int, white: int):
-	var reds = range(correct).map(func(_x): return Code.Hints.RED)
+func render_hints(red: int, white: int):
+	var reds = range(red).map(func(_x): return Code.Hints.RED)
 	var whites = range(white).map(func(_x): return Code.Hints.WHITE)
 
 	$Hints.render(whites + reds)

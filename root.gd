@@ -36,18 +36,23 @@ func on_play_again():
 	code = _gen_code()
 	rnd = 1
 
-
-func on_submission(submission: Dictionary):
-	var hits = code.keys() \
+func _evaluate(submission: Dictionary):
+	var reds = code.keys() \
 		.filter(func(x: int): return code[x] == submission[x]) \
 		.map(func(x: int): return code[x])
 
-	var white = _unique(submission.values()) \
+	var whites = _unique(submission.values()) \
 		.filter(func(x: int): return x in code.values()) \
-		.filter(func(x: int): return x not in hits) \
+		.filter(func(x: int): return x not in reds) \
 		.size()
+	
+	return Submission.new(submission.values(), reds.size(), whites)
 
-	$Board.update(rnd, submission.values(), hits.size(), white)
+
+func on_submission(submission: Dictionary):
+	var evaluated: Submission = _evaluate(submission)
+
+	$Board.update(rnd, evaluated)
 
 	if submission == code:
 		$Unlocked.play()

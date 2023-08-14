@@ -9,6 +9,7 @@ offset_left = -38.0
 offset_top = -40.0
 offset_right = 42.0
 offset_bottom = 40.0
+tooltip_text = "Right-click to decrease."
 button_mask = 3
 script = ExtResource("1_5xeft")
 
