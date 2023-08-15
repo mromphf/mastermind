@@ -23,5 +23,6 @@ stream = ExtResource("4_l01s2")
 
 [node name="Unlock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_vc4vu")
+volume_db = -2.0
 
 [connection signal="timeout" from="Timer" to="." method="_rotate"]
