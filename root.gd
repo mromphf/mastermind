@@ -49,14 +49,16 @@ func _evaluate(submission: Dictionary):
 	return Submission.new(submission.values(), reds.size(), whites)
 
 
+func on_unlocked():
+		$GameOver.render(code, true)
+
+
 func on_submission(submission: Dictionary):
 	var evaluated: Submission = _evaluate(submission)
-
 	$Board.update(rnd, evaluated)
 
-	if submission == code:
-		$Unlocked.play()
-		$GameOver.render(code, true)
+	if submission == code:		
+		$Vault.unlock()
 	elif rnd == _MAX_ROUNDS:
 		$Buzzer.play()
 		$GameOver.render(code)

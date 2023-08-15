@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dao0nq3oawri0"]
+[gd_scene load_steps=8 format=3 uid="uid://dao0nq3oawri0"]
 
 [ext_resource type="PackedScene" uid="uid://bpq47b3uc84so" path="res://Hud.tscn" id="1_6aub6"]
 [ext_resource type="PackedScene" uid="uid://j5a1mjrxu15r" path="res://Board.tscn" id="1_6ygrk"]
 [ext_resource type="Script" path="res://root.gd" id="1_nedjg"]
+[ext_resource type="PackedScene" uid="uid://dpsmeeaq75aic" path="res://Vault.tscn" id="4_cet3u"]
 [ext_resource type="PackedScene" uid="uid://dhoronxqmj2jb" path="res://GameOver.tscn" id="4_xing0"]
 [ext_resource type="AudioStream" uid="uid://ovdaoyooxfse" path="res://sfx/buzzer.mp3" id="5_gd82g"]
 [ext_resource type="AudioStream" uid="uid://xu8xfenextxb" path="res://sfx/unlock.mp3" id="6_rrw65"]
@@ -18,6 +19,9 @@ offset_top = 639.0
 offset_right = 300.0
 offset_bottom = 639.0
 
+[node name="Vault" parent="." instance=ExtResource("4_cet3u")]
+position = Vector2(240, 354)
+
 [node name="GameOver" parent="." instance=ExtResource("4_xing0")]
 visible = false
 
@@ -28,4 +32,5 @@ stream = ExtResource("5_gd82g")
 stream = ExtResource("6_rrw65")
 
 [connection signal="publish_submission" from="HUD" to="." method="on_submission"]
+[connection signal="unlocked" from="Vault" to="." method="on_unlocked"]
 [connection signal="play_again" from="GameOver" to="." method="on_play_again"]
