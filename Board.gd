@@ -8,8 +8,4 @@ func reset():
 
 func update(rnd, submission: Submission):
 	var target = $OutputHousing.get_children()[max(0, rnd - 1)]
-	target.render_submission(submission.code)
-	target.render_hints(submission.reds, submission.whites)
-
-func _ready():
-	pass
+	target.render_submission(submission)

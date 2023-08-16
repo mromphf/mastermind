@@ -6,7 +6,7 @@ signal selector_pushed
 
 @export var ord: int = 0
 
-func is_selected():
+func is_selected() -> bool:
 	return ord > 0
 
 func reset():

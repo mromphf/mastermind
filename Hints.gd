@@ -19,11 +19,11 @@ func reset():
 		node.set_texture(Code.hint_map[Code.Hints.EMPTY])
 
 
-func render(hints: Array):
-	_hints = hints
+func render(submission: Submission):
+	_hints = submission.hints()
 	_nodes = $Control.get_children()
 
-	if hints.size() == 4 and hints.all(func(x: int): return x == _RED):
+	if submission.cracked():
 		$Beep.play()
 		for node in _nodes:
 			node.set_texture(Code.hint_map[_RED])

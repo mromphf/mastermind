@@ -10,9 +10,8 @@ func _rotate():
 		$Unlock.play()
 		$Lock.rotation_degrees = 0
 		emit_signal("unlocked")
-	
+
 
 func unlock():
 	$Spin.play()
 	$Timer.start()
-	
