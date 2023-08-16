@@ -4,8 +4,8 @@ signal unlocked
 
 
 func _rotate():
-	$Lock.rotate(deg_to_rad(10))
-	if $Lock.rotation_degrees >= 360:
+	$Lock.rotate(PI / 18)
+	if $Lock.rotation >= PI * 2:
 		$Timer.stop()
 		$Unlock.play()
 		$Lock.rotation_degrees = 0
