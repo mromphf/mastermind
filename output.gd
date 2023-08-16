@@ -13,7 +13,7 @@ func render_hints(red: int, white: int):
 	var reds = range(red).map(func(_x): return Code.Hints.RED)
 	var whites = range(white).map(func(_x): return Code.Hints.WHITE)
 
-	$Hints.render(whites + reds)
+	$Hints.render(reds + whites)
 
 
 func reset():

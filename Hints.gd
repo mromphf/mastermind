@@ -11,7 +11,7 @@ func _tick():
 	else:
 		$Beep.play()
 		_nodes.pop_front() \
-			.set_texture(Code.hint_map[_hints.pop_back()])
+			.set_texture(Code.hint_map[_hints.pop_front()])
 
 
 func reset():
