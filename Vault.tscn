@@ -1,10 +1,69 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpsmeeaq75aic"]
+[gd_scene load_steps=8 format=3 uid="uid://dpsmeeaq75aic"]
 
 [ext_resource type="Script" path="res://Vault.gd" id="1_cxcj2"]
 [ext_resource type="Texture2D" uid="uid://b64b5i3m2tkps" path="res://img/vault_door.svg" id="1_nes0a"]
 [ext_resource type="Texture2D" uid="uid://dgpwxwmburcd4" path="res://img/vault_lock.svg" id="2_v6vew"]
 [ext_resource type="AudioStream" uid="uid://bexk88yp15jx4" path="res://sfx/bike_chain.mp3" id="4_l01s2"]
 [ext_resource type="AudioStream" uid="uid://xu8xfenextxb" path="res://sfx/unlock.mp3" id="5_vc4vu"]
+
+[sub_resource type="Animation" id="Animation_i0ntw"]
+resource_name = "unlock"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lock:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 4.71239]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spin:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Unlock:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["unlocked"],
+"method": &"emit_signal"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jub43"]
+_data = {
+"unlock": SubResource("Animation_i0ntw")
+}
 
 [node name="Vault" type="Node2D"]
 script = ExtResource("1_cxcj2")
@@ -13,6 +72,7 @@ script = ExtResource("1_cxcj2")
 texture = ExtResource("1_nes0a")
 
 [node name="Lock" type="Sprite2D" parent="."]
+rotation = 4.71239
 texture = ExtResource("2_v6vew")
 
 [node name="Timer" type="Timer" parent="."]
@@ -24,5 +84,10 @@ stream = ExtResource("4_l01s2")
 [node name="Unlock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_vc4vu")
 volume_db = -2.0
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jub43")
+}
 
 [connection signal="timeout" from="Timer" to="." method="_rotate"]
