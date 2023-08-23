@@ -13,7 +13,7 @@ config_version=5
 config/name="mastermind"
 run/main_scene="res://root.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://img/vault_small.svg"
 
 [display]
 
