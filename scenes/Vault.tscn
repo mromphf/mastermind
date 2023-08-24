@@ -72,11 +72,7 @@ script = ExtResource("1_cxcj2")
 texture = ExtResource("1_nes0a")
 
 [node name="Lock" type="Sprite2D" parent="."]
-rotation = 4.71239
 texture = ExtResource("2_v6vew")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.05
 
 [node name="Spin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_l01s2")
@@ -89,5 +85,3 @@ volume_db = -2.0
 libraries = {
 "": SubResource("AnimationLibrary_jub43")
 }
-
-[connection signal="timeout" from="Timer" to="." method="_rotate"]
