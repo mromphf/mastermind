@@ -27,3 +27,5 @@ volume_db = -3.0
 [connection signal="game_over" from="Board" to="." method="on_unlocked"]
 [connection signal="publish_submission" from="HUD" to="." method="on_submission"]
 [connection signal="play_again" from="GameOver" to="." method="on_play_again"]
+[connection signal="play_again" from="GameOver" to="Board" method="reset"]
+[connection signal="play_again" from="GameOver" to="HUD" method="reset"]

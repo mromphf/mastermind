@@ -17,6 +17,13 @@ enum Hints {
 	RED = 2
 }
 
+const _TARGETS = [
+	Code.Colors.AQUA,
+	Code.Colors.GREEN,
+	Code.Colors.PINK,
+	Code.Colors.PURPLE,
+	Code.Colors.YELLOW
+]
 
 static var EMPTY_BOX = preload("res://img/blc_empty.svg")
 static var EMPTY_CIRCLE = preload("res://img/crc_empty.svg")
@@ -35,3 +42,12 @@ static var hint_map = {
 	Hints.WHITE: preload("res://img/crc_white.svg"),
 	Hints.RED: preload("res://img/crc_red.svg")
 }
+
+static func generate():
+	randomize()
+	return {
+		1: _TARGETS.pick_random(),
+		2: _TARGETS.pick_random(),
+		3: _TARGETS.pick_random(),
+		4: _TARGETS.pick_random()
+	}

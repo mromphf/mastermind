@@ -16,3 +16,4 @@ func render(code: Dictionary, victory: bool = false):
 func _on_play_again():
 	$Snap.play()
 	emit_signal("play_again")
+	hide()

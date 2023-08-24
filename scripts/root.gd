@@ -1,13 +1,6 @@
 extends Node
 
 const _MAX_ROUNDS = 10
-const _TARGETS = [
-	Code.Colors.AQUA,
-	Code.Colors.GREEN,
-	Code.Colors.PINK,
-	Code.Colors.PURPLE,
-	Code.Colors.YELLOW
-]
 
 var code = {}
 var rnd = 1
@@ -20,20 +13,9 @@ func _unique(arr):
 			res.push_back(x)
 	return res
 
-func _gen_code() -> Dictionary:
-	return {
-		1: _TARGETS.pick_random(),
-		2: _TARGETS.pick_random(),
-		3: _TARGETS.pick_random(),
-		4: _TARGETS.pick_random()
-	}
-
 
 func on_play_again():
-	$Board.reset()
-	$HUD.reset()
-	$GameOver.visible = false
-	code = _gen_code()
+	code = Code.generate()
 	rnd = 1
 
 func _evaluate(submission: Dictionary) -> Submission:
@@ -66,5 +48,4 @@ func on_submission(submission: Dictionary):
 
 
 func _ready():
-	randomize()
-	code = _gen_code()
+	code = Code.generate()
