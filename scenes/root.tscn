@@ -1,13 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dao0nq3oawri0"]
+[gd_scene load_steps=4 format=3 uid="uid://dao0nq3oawri0"]
 
-[ext_resource type="Script" path="res://scripts/root.gd" id="1_aw86q"]
 [ext_resource type="PackedScene" uid="uid://j5a1mjrxu15r" path="res://scenes/Board.tscn" id="2_la8j5"]
 [ext_resource type="PackedScene" uid="uid://bpq47b3uc84so" path="res://scenes/HUD.tscn" id="3_whrwp"]
 [ext_resource type="PackedScene" uid="uid://dhoronxqmj2jb" path="res://scenes/GameOver.tscn" id="5_bfhel"]
-[ext_resource type="AudioStream" uid="uid://ovdaoyooxfse" path="res://sfx/buzzer.mp3" id="6_6eqiu"]
 
 [node name="Root" type="Node"]
-script = ExtResource("1_aw86q")
 
 [node name="Board" parent="." instance=ExtResource("2_la8j5")]
 
@@ -20,12 +17,7 @@ offset_bottom = 639.0
 [node name="GameOver" parent="." instance=ExtResource("5_bfhel")]
 visible = false
 
-[node name="Buzzer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_6eqiu")
-volume_db = -3.0
-
-[connection signal="game_over" from="Board" to="." method="on_unlocked"]
-[connection signal="publish_submission" from="HUD" to="." method="on_submission"]
-[connection signal="play_again" from="GameOver" to="." method="on_play_again"]
+[connection signal="game_over" from="Board" to="GameOver" method="render"]
+[connection signal="publish_submission" from="HUD" to="Board" method="update"]
 [connection signal="play_again" from="GameOver" to="Board" method="reset"]
 [connection signal="play_again" from="GameOver" to="HUD" method="reset"]
