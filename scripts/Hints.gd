@@ -1,7 +1,5 @@
 extends Node2D
 
-const _RED = Code.Hints.RED
-
 var _hints = []
 var _nodes = []
 
@@ -24,8 +22,6 @@ func render(submission: Submission):
 	_nodes = $Control.get_children()
 
 	if submission.cracked():
-		$Beep.play()
-		for node in _nodes:
-			node.set_texture(Code.hint_map[_RED])
+		$Animation.play(&"unlocked")
 	else:
 		$Timer.start()
