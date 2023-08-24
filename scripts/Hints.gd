@@ -13,8 +13,7 @@ func _tick():
 
 
 func reset():
-	for node in $Control.get_children():
-		node.set_texture(Code.hint_map[Code.Hints.EMPTY])
+	$Animation.play(&"reset")
 
 
 func render(submission: Submission):
