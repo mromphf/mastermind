@@ -7,14 +7,33 @@ extends Node2D
 	3: $Input/Box4
 }
 
+var _hints = []
+var _nodes = []
 
-func render_submission(submission: Submission):
-	for idx in inputs.keys():
-		inputs[idx].set_texture(Code.image_map[submission.code[idx]])
 
-	$Hints.render(submission)
+func _tick():
+	if _hints.is_empty():
+		$Timer.stop()
+	else:
+		$Beep.play()
+		_nodes.pop_front() \
+			.set_texture(Code.hint_map[_hints.pop_front()])
 
 
 func reset():
-	$Animation.play(&"reset")
-	$Hints.reset()
+	$BoxAnimations.play(&"reset")
+	$HintAnimations.play(&"reset")
+
+
+func render_submission(submission: Submission):
+	_hints = submission.hints()
+	_nodes = $Hints.get_children()
+	
+	for idx in inputs.keys():
+		inputs[idx].set_texture(Code.image_map[submission.code[idx]])
+
+	if submission.cracked():
+		$HintAnimations.play(&"unlocked")
+	else:
+		$Timer.start()
+
