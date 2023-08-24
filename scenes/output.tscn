@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0216y6og1y2l"]
 
 [ext_resource type="Texture2D" uid="uid://cpvu1rsfkjm85" path="res://img/blc_empty.svg" id="1_u66y8"]
-[ext_resource type="Script" path="res://output.gd" id="1_usft5"]
+[ext_resource type="Script" path="res://scripts/output.gd" id="1_usft5"]
 [ext_resource type="Texture2D" uid="uid://gsjg81gaoqby" path="res://img/crc_empty.svg" id="2_ij8el"]
-[ext_resource type="PackedScene" uid="uid://bgodxs4v4640m" path="res://Hints.tscn" id="3_xpa0y"]
+[ext_resource type="PackedScene" uid="uid://bgodxs4v4640m" path="res://scenes/Hints.tscn" id="3_xpa0y"]
 
 [node name="output" type="Node2D"]
 script = ExtResource("1_usft5")

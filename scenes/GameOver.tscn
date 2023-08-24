@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhoronxqmj2jb"]
 
-[ext_resource type="Script" path="res://GameOver.gd" id="1_ujdme"]
+[ext_resource type="Script" path="res://scripts/GameOver.gd" id="1_ujdme"]
 [ext_resource type="Texture2D" uid="uid://cpvu1rsfkjm85" path="res://img/blc_empty.svg" id="2_bxg0o"]
 [ext_resource type="AudioStream" uid="uid://bi4oki6c5jmyn" path="res://sfx/snap.mp3" id="3_dgw14"]
 
