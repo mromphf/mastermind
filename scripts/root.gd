@@ -57,9 +57,7 @@ func on_submission(submission: Dictionary):
 	var evaluated: Submission = _evaluate(submission)
 	$Board.update(rnd, evaluated)
 
-	if evaluated.cracked():
-		$Vault.unlock()
-	elif rnd == _MAX_ROUNDS:
+	if rnd == _MAX_ROUNDS and not evaluated.cracked():
 		$Buzzer.play()
 		$GameOver.render(code)
 

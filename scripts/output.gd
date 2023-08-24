@@ -1,5 +1,7 @@
 extends Node2D
 
+signal code_cracked
+
 @onready var inputs = {
 	0: $Input/Box1,
 	1: $Input/Box2,

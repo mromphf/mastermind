@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://j5a1mjrxu15r"]
+[gd_scene load_steps=5 format=3 uid="uid://j5a1mjrxu15r"]
 
-[ext_resource type="PackedScene" uid="uid://d0216y6og1y2l" path="res://scenes/output.tscn" id="1_2df6f"]
+[ext_resource type="PackedScene" uid="uid://d0216y6og1y2l" path="res://scenes/Output.tscn" id="1_2df6f"]
 [ext_resource type="Script" path="res://scripts/board.gd" id="1_e3bih"]
+[ext_resource type="PackedScene" uid="uid://dpsmeeaq75aic" path="res://scenes/Vault.tscn" id="3_3xxko"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rbagi"]
 
@@ -52,3 +53,8 @@ position = Vector2(40, 519)
 
 [node name="output10" parent="OutputHousing" instance=ExtResource("1_2df6f")]
 position = Vector2(40, 579)
+
+[node name="Vault" parent="." instance=ExtResource("3_3xxko")]
+position = Vector2(240, 360)
+
+[connection signal="unlocked" from="Vault" to="." method="on_game_over"]
