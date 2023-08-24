@@ -16,7 +16,5 @@ func render_submission(submission: Submission):
 
 
 func reset():
-	for ipt in inputs.values():
-		ipt.set_texture(Code.EMPTY_BOX)
-
+	$Animation.play(&"reset")
 	$Hints.reset()
