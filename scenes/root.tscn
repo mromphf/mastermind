@@ -1,31 +1,31 @@
 [gd_scene load_steps=7 format=3 uid="uid://dao0nq3oawri0"]
 
-[ext_resource type="Script" path="res://scripts/root.gd" id="1_gt5k2"]
-[ext_resource type="PackedScene" uid="uid://j5a1mjrxu15r" path="res://scenes/Board.tscn" id="2_llxk0"]
-[ext_resource type="PackedScene" uid="uid://bpq47b3uc84so" path="res://scenes/HUD.tscn" id="3_g3o4g"]
-[ext_resource type="PackedScene" uid="uid://dpsmeeaq75aic" path="res://scenes/Vault.tscn" id="4_ypn8h"]
-[ext_resource type="PackedScene" uid="uid://dhoronxqmj2jb" path="res://scenes/GameOver.tscn" id="5_j6dnw"]
-[ext_resource type="AudioStream" uid="uid://ovdaoyooxfse" path="res://sfx/buzzer.mp3" id="6_5rwps"]
+[ext_resource type="Script" path="res://scripts/root.gd" id="1_aw86q"]
+[ext_resource type="PackedScene" uid="uid://j5a1mjrxu15r" path="res://scenes/Board.tscn" id="2_la8j5"]
+[ext_resource type="PackedScene" uid="uid://bpq47b3uc84so" path="res://scenes/HUD.tscn" id="3_whrwp"]
+[ext_resource type="PackedScene" uid="uid://dpsmeeaq75aic" path="res://scenes/Vault.tscn" id="4_e2qwt"]
+[ext_resource type="PackedScene" uid="uid://dhoronxqmj2jb" path="res://scenes/GameOver.tscn" id="5_bfhel"]
+[ext_resource type="AudioStream" uid="uid://ovdaoyooxfse" path="res://sfx/buzzer.mp3" id="6_6eqiu"]
 
 [node name="Root" type="Node"]
-script = ExtResource("1_gt5k2")
+script = ExtResource("1_aw86q")
 
-[node name="Board" parent="." instance=ExtResource("2_llxk0")]
+[node name="Board" parent="." instance=ExtResource("2_la8j5")]
 
-[node name="HUD" parent="." instance=ExtResource("3_g3o4g")]
+[node name="HUD" parent="." instance=ExtResource("3_whrwp")]
 offset_left = 300.0
 offset_top = 639.0
 offset_right = 300.0
 offset_bottom = 639.0
 
-[node name="Vault" parent="." instance=ExtResource("4_ypn8h")]
+[node name="Vault" parent="." instance=ExtResource("4_e2qwt")]
 position = Vector2(240, 354)
 
-[node name="GameOver" parent="." instance=ExtResource("5_j6dnw")]
+[node name="GameOver" parent="." instance=ExtResource("5_bfhel")]
 visible = false
 
 [node name="Buzzer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_5rwps")
+stream = ExtResource("6_6eqiu")
 volume_db = -3.0
 
 [connection signal="publish_submission" from="HUD" to="." method="on_submission"]

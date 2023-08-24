@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dpsmeeaq75aic"]
 
-[ext_resource type="Script" path="res://scripts/Vault.gd" id="1_cxcj2"]
+[ext_resource type="Script" path="res://scripts/vault.gd" id="1_cxcj2"]
 [ext_resource type="Texture2D" uid="uid://b64b5i3m2tkps" path="res://img/vault_door.svg" id="1_nes0a"]
 [ext_resource type="Texture2D" uid="uid://dgpwxwmburcd4" path="res://img/vault_lock.svg" id="2_v6vew"]
 [ext_resource type="AudioStream" uid="uid://bexk88yp15jx4" path="res://sfx/bike_chain.mp3" id="4_l01s2"]
