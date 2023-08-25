@@ -1,11 +1,13 @@
-extends Node
+extends RefCounted
 
 class_name Submission
 
-@export var code: Array = []
+var code: Array = []
 var reds: int
 var whites: int
 
+func index(idx: int):
+	return code[idx]
 
 func cracked() -> bool:
 	return reds == 4

@@ -32,7 +32,7 @@ func render_submission(submission: Submission):
 	_nodes = $Hints.get_children()
 	
 	for idx in inputs.keys():
-		inputs[idx].set_texture(Code.image_map[submission.code[idx]])
+		inputs[idx].set_texture(Code.image_map[submission.index(idx)])
 
 	if submission.cracked():
 		$HintAnimations.play(&"unlocked")
