@@ -44,20 +44,16 @@ static var hint_map = {
 }
 
 
-static func _unique(arr):
-	var res = []
-	for x in arr:
-		if x not in res:
-			res.push_back(x)
-	return res
-
-
 static func evaluate(code: Dictionary, submission: Dictionary):
+	var unique = {}
+	for val in submission.values():
+		unique[val] = val
+
 	var reds = code.keys() \
 		.filter(func(x: int): return code[x] == submission[x]) \
 		.map(func(x: int): return code[x])
 
-	var whites = _unique(submission.values()) \
+	var whites = unique.values() \
 		.filter(func(x: int): return x in code.values()) \
 		.filter(func(x: int): return x not in reds) \
 		.size()
