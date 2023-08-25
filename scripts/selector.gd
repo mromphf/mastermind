@@ -21,5 +21,5 @@ func _on_click(event:InputEvent):
 			ord = min(5, ord + 1)
 
 		$Sprite.set_texture(Code.image_map[ord])
-		$Snap.play()
+		$Click.play()
 		emit_signal("selector_pushed")
