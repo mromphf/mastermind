@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://7boequc0lv8y" path="res://img/blc_white.svg" id="2_7oxvu"]
 [ext_resource type="AudioStream" uid="uid://csll1gryax57o" path="res://sfx/button.mp3" id="3_g3c0x"]
 
-[node name="Selector" type="TextureButton"]
+[node name="Selector" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 offset_left = -38.0
 offset_top = -40.0
 offset_right = 42.0
 offset_bottom = 40.0
 tooltip_text = "Right-click to decrease."
-button_mask = 3
 script = ExtResource("1_5xeft")
 
 [node name="Sprite" type="Sprite2D" parent="."]

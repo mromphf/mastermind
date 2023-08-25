@@ -1,4 +1,4 @@
-extends TextureButton
+extends Control
 
 class_name Selector
 
@@ -17,7 +17,7 @@ func _on_click(event:InputEvent):
 	if event.is_pressed():
 		if event.button_mask == MOUSE_BUTTON_RIGHT:
 			ord = max(1, ord - 1)
-		elif event.button_mask == MOUSE_BUTTON_LEFT:
+		else:
 			ord = min(5, ord + 1)
 
 		$Sprite.set_texture(Code.image_map[ord])
