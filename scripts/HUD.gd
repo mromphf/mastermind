@@ -2,15 +2,14 @@ extends Control
 
 signal publish_submission
 
-var c = Code.Colors
-var img_map = Code.image_map
+@onready var selectors = $Selections.get_children()
 
 
 func on_selection():
-	$Submit.disabled = not $Selections.get_children() \
+	$Submit.disabled = not selectors \
 		.all(func(s: Selector): return s.is_selected())
-	
-	
+
+
 func _on_submit():
 	$Snap.play()
 	$Submit.disabled = true
@@ -23,9 +22,5 @@ func _on_submit():
 
 
 func reset():
-	for selector in $Selections.get_children():
+	for selector in selectors:
 		selector.reset()
-
-func _ready():
-	for selector in $Selections.get_children():
-		selector.connect("selector_pushed", on_selection)

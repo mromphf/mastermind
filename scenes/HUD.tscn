@@ -59,3 +59,7 @@ stream = ExtResource("3_ph00s")
 volume_db = -15.0
 
 [connection signal="pressed" from="Submit" to="." method="_on_submit"]
+[connection signal="selector_pushed" from="Selections/Selector1" to="." method="on_selection"]
+[connection signal="selector_pushed" from="Selections/Selector2" to="." method="on_selection"]
+[connection signal="selector_pushed" from="Selections/Selector3" to="." method="on_selection"]
+[connection signal="selector_pushed" from="Selections/Selector4" to="." method="on_selection"]
