@@ -9,28 +9,29 @@ const _MAX_ROUNDS = 10
 @onready var _OUTPUTS = $OutputHousing.get_children()
 
 var code = {}
-var rnd = 1
+var rnd = 0
 
 func on_game_over():
 	emit_signal(&"game_over", code, true)
 
 func reset():
-	rnd = 1
+	rnd = 0
 	code = Code.generate()
 	for node in $OutputHousing.get_children():
 		node.reset()
 
 func update(submission: Dictionary):
-	var target = _OUTPUTS[max(0, rnd - 1)]
+	var target = _OUTPUTS[rnd]
 	var evaluated: Submission = Code.evaluate(code, submission)
-	
+
+
 	if rnd == _MAX_ROUNDS and not evaluated.cracked():
 		$Buzzer.play()
 		emit_signal(&"game_over", code)
 
 	rnd += 1
 	target.render_submission(evaluated)
-	evaluated.queue_free()
+
 
 func _ready():
 	code = Code.generate()
