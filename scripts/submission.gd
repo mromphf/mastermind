@@ -6,6 +6,7 @@ class_name Submission
 var reds: int
 var whites: int
 
+
 func cracked() -> bool:
 	return reds == 4
 

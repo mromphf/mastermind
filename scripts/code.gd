@@ -43,6 +43,28 @@ static var hint_map = {
 	Hints.RED: preload("res://img/crc_red.svg")
 }
 
+
+static func _unique(arr):
+	var res = []
+	for x in arr:
+		if x not in res:
+			res.push_back(x)
+	return res
+
+
+static func evaluate(code: Dictionary, submission: Dictionary):
+	var reds = code.keys() \
+		.filter(func(x: int): return code[x] == submission[x]) \
+		.map(func(x: int): return code[x])
+
+	var whites = _unique(submission.values()) \
+		.filter(func(x: int): return x in code.values()) \
+		.filter(func(x: int): return x not in reds) \
+		.size()
+
+	return Submission.new(submission.values(), reds.size(), whites)
+
+
 static func generate():
 	randomize()
 	return {
