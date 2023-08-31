@@ -22,9 +22,9 @@ text = "Submit"
 [node name="Selections" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 40.0
-offset_top = 40.0
+offset_top = 60.0
 offset_right = 360.0
-offset_bottom = 120.0
+offset_bottom = 140.0
 
 [node name="Selector1" parent="Selections" instance=ExtResource("2_f1ncc")]
 layout_mode = 2
