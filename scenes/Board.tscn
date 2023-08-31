@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://j5a1mjrxu15r"]
+[gd_scene load_steps=7 format=3 uid="uid://j5a1mjrxu15r"]
 
 [ext_resource type="PackedScene" uid="uid://d0216y6og1y2l" path="res://scenes/Output.tscn" id="1_2df6f"]
 [ext_resource type="Script" path="res://scripts/board.gd" id="1_e3bih"]
+[ext_resource type="Texture2D" uid="uid://c7x8nstsl63sx" path="res://img/panel.svg" id="2_ve2ms"]
 [ext_resource type="PackedScene" uid="uid://dpsmeeaq75aic" path="res://scenes/Vault.tscn" id="3_3xxko"]
 [ext_resource type="AudioStream" uid="uid://ovdaoyooxfse" path="res://sfx/buzzer.mp3" id="4_20n7j"]
 
@@ -17,6 +18,11 @@ offset_top = -80.0
 offset_right = 1080.0
 offset_bottom = 1000.0
 texture = SubResource("CanvasTexture_rbagi")
+
+[node name="Panel" type="Sprite2D" parent="TextureRect"]
+position = Vector2(789.5, 420)
+scale = Vector2(1.24627, 1.41079)
+texture = ExtResource("2_ve2ms")
 
 [node name="OutputHousing" type="Control" parent="."]
 layout_mode = 3
