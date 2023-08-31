@@ -4,7 +4,7 @@ class_name Board
 
 signal game_over
 
-const _MAX_ROUNDS = 10
+const _MAX_ROUNDS = 9
 
 @onready var _OUTPUTS = $OutputHousing.get_children()
 
