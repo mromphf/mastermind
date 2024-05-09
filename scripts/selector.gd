@@ -4,22 +4,22 @@ class_name Selector
 
 signal selector_pushed
 
-@export var ord: int = 0
+@export var ordinal: int = 0
 
 func is_selected() -> bool:
-	return ord > 0
+	return ordinal > 0
 
 func reset():
-	ord = 0
-	$Sprite.set_texture(Code.image_map[ord])
+	ordinal = 0
+	$Sprite.set_texture(Code.image_map[ordinal])
 
 func _on_click(event:InputEvent):
 	if event.is_pressed():
 		if event.button_mask == MOUSE_BUTTON_RIGHT:
-			ord = max(1, ord - 1)
+			ordinal = max(1, ordinal - 1)
 		else:
-			ord = min(5, ord + 1)
+			ordinal = min(5, ordinal + 1)
 
-		$Sprite.set_texture(Code.image_map[ord])
+		$Sprite.set_texture(Code.image_map[ordinal])
 		$Click.play()
 		emit_signal("selector_pushed")

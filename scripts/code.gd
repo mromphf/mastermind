@@ -50,12 +50,12 @@ static func evaluate(code: Dictionary, submission: Dictionary):
 		unique[val] = val
 
 	var reds = code.keys() \
-		.filter(func(x: int): return code[x] == submission[x]) \
-		.map(func(x: int): return code[x])
+		.filter(func(entry: int): return code[entry] == submission[entry]) \
+		.map(func(entry: int): return code[entry])
 
 	var whites = unique.values() \
-		.filter(func(x: int): return x in code.values()) \
-		.filter(func(x: int): return x not in reds) \
+		.filter(func(entry: int): return entry in code.values()) \
+		.filter(func(entry: int): return entry not in reds) \
 		.size()
 
 	return Submission.new(submission.values(), reds.size(), whites)
